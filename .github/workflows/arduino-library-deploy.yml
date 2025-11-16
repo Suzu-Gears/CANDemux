@@ -25,7 +25,6 @@ jobs:
         uses: Suzu-Gears/arduino-library-deploy@main
         with:
           lint-mode: 'submit'
-          source-branch: 'develop'
           target-branch: 'main'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
