@@ -11,7 +11,9 @@
 #include <utility>
 #include <initializer_list>
 
-#include <api/HardwareCAN.h>
+#ifndef ARDUINOCORE_API_HARDWARECAN_H
+#error "CANDemux.h: include a HardwareCAN provider (e.g. <Arduino_CAN.h>, <ESP32_TWAI.h>, <RP2040PIO_CAN.h>) before this file."
+#endif
 
 class CANDemux;
 class VirtualCANImpl;
