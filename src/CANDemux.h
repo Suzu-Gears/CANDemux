@@ -1,5 +1,9 @@
 #pragma once
 
+#if !__has_include(<api/HardwareCAN.h>)
+#error "CANDemux.h: include a HardwareCAN provider (e.g. <Arduino_CAN.h>, <ESP32_TWAI.h>, <RP2040PIO_CAN.h>) before this file."
+#endif
+
 #include <vector>
 #include <deque>
 #include <cstdint>
@@ -10,9 +14,7 @@
 #include <utility>
 #include <initializer_list>
 
-#ifndef ARDUINOCORE_API_HARDWARECAN_H
-#error "CANDemux.h: include a HardwareCAN provider (e.g. <Arduino_CAN.h>, <ESP32_TWAI.h>, <RP2040PIO_CAN.h>) before this file."
-#endif
+#include <api/HardwareCAN.h>
 
 class CANDemux;
 class VirtualCANImpl;
